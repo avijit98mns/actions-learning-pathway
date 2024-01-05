@@ -3,7 +3,7 @@ on: push
    
 
 jobs: 
-  build:
+  t1:
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repo
@@ -14,7 +14,7 @@ jobs:
           node-version: ${{inputs.node-version }}
       - run: npm install
       - run: npm run build 
-  test: 
+  t2: 
     needs: build
     runs-on: ubuntu-latest
     steps: 
@@ -26,7 +26,7 @@ jobs:
           node-version: ${{inputs.node-version }}
       - run: npm install
       - run: npm test
-  deploy: 
+  d1: 
     needs: test
     permissions:
       contents: write

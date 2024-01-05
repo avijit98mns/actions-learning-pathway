@@ -42,7 +42,7 @@ jobs:
 
 
   d1: 
-    needs: t1
+    needs: t1,t3
     permissions:
       contents: write
       pages: write     

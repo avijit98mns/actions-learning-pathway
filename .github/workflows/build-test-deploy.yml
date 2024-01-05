@@ -26,8 +26,23 @@ jobs:
           node-version: ${{inputs.node-version }}
       - run: npm install
       - run: npm test
-  d1: 
+
+  t3: 
     needs: t2
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{inputs.node-version }}
+      - run: npm install
+      - run: npm test
+
+
+  d1: 
+    needs: t1
     permissions:
       contents: write
       pages: write     

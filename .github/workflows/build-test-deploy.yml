@@ -1,11 +1,5 @@
 name: build-test-deploy
-on: 
-  workflow_call:
-    inputs:
-      node-version:
-        description: "Node Version"
-        required: true
-        type: string
+on: push
    
 
 jobs: 

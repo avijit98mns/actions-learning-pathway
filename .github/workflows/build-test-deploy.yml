@@ -28,7 +28,7 @@ jobs:
       - run: npm test
 
   t3: 
-    needs: t2
+    needs: t1
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repo
